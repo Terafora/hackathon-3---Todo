@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 
 # local apps
 
-    "my_mixtape",
+    "todolist",
 
 # 3rd party apps
 
