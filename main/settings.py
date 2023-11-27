@@ -94,7 +94,7 @@ DJRICHTEXTFIELD_CONFIG = {
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-ROOT_URLCONF = "config.urls"
+ROOT_URLCONF = "main.urls"
 
 TEMPLATES = [
     {
@@ -124,7 +124,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-WSGI_APPLICATION = "config.wsgi.application"
+WSGI_APPLICATION = "main.wsgi.application"
 
 
 # Database
