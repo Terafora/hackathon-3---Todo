@@ -1,5 +1,5 @@
-from django.views.generic import ListView, CreateView, DetailView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, CreateView, DetailView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, userPassesTestMixin
 from .models import Note
 from .forms import NoteForm
 
@@ -21,3 +21,11 @@ class CreateNote(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(CreateNote, self).form_valid(form)
+
+class DeleteNote(LoginRequiredMixin, userPassesTestMixin ,DeleteView):
+    """Delete a note"""
+    model = Note
+    success_url = ""
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
