@@ -17,12 +17,15 @@
 </head>
 
 <body>
-
+    {% include './header.html' %}
     <main>
-        {% include './header.html' %} {% block content %} {% endblock %} {% include './footer.html' %}
+
+        {% block content %}
+        {% endblock %}
+
     </main>
 
-
+    {% include './footer.html' %}
 
 
 </body>
