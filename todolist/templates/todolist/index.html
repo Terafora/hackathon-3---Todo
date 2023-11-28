@@ -10,7 +10,7 @@
         {% for note in notes %}
             <div>
                 <h2 class="text-center" aria-label="click to view {{note.title}}">{{note.title}}</h2>
-                <div>{{note.note}}</div>
+                <div>{{note.note | trancatechars:100}}</div>
             </div>
         {% endfor %}
     </div>
