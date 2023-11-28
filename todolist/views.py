@@ -11,6 +11,12 @@ class Home(ListView):
     model = Note
     context_object_name = 'note_board'
     
+class NoteDetail(DetailView):
+    """Show details of one note"""
+    template_name = "todolist/note_detail.html"
+    model = Note
+    context_object_name = "note"
+
 
 class CreateNote(LoginRequiredMixin, CreateView):
     """Add a new note"""
