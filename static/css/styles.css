@@ -1,22 +1,50 @@
-/* #navigation-bar {
-    padding:5px; 
-    margin:5px; 
-    color:#2B2D42; 
-    text-decoration: white;
-    background-color: pink;
+
+:root{
+  /* Fonts */
+  
+  --title: 'Roboto', sans-serif;
+  --main-font: 'Sansita', sans-serif;
+  
+  /* Colors */
+  
+  --background: #3f006a0f;
+  --blue: #0d6efd;
+  --black: #000;
+  --off-white: #f6f6f6;
+  --white: #fff;
+  --orange: #ffbf50;
+  
+  
+  /* Utils */
+  
+  --smal-box-shadow: 1px -1px 7px 0 #00000061;
+  --border: #00000030 1px solid ;
+  }
+
+  /* Navabr */
+
+.logo-icon{
+  
+    width: 18.75rem;
+    height: 5rem;
+
+
 }
 
-/* Footer */
 
-/* footer {
-    background-color: #59114d;
-    opacity:1;
-    margin: 10px; 
-    padding:5px; 
-    background-color: pink;
+html,body{
+  height: 100%;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+}
 
+main {
+  flex: 1 0 auto;
+  background-color: var(--white);
+}
 
 .copyright {
     margin-top:15px;
@@ -110,3 +138,23 @@ form {
   text-shadow: none;
 
 }
+=======
+  
+/* Footer */
+
+  footer{
+    flex-shrink: 0;
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--border);
+}
+
+.social-icon {
+  height: 2rem;
+  margin: 1rem; 
+  margin-bottom: 10px;
+}
+
