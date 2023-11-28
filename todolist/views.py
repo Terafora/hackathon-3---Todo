@@ -6,7 +6,11 @@ from .forms import NoteForm
 # Create your views here.
 
 class Home(TemplateView):
+    """View all to do notes on home page"""
     template_name = "todolist/index.html"
+    model = Note
+    context_object_name = 'note_board'
+    
 
 
 class CreateNote(LoginRequiredMixin, CreateView):
