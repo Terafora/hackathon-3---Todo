@@ -14,9 +14,11 @@
     {% csrf_token %}
     {{ form|crispy }}
     {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <button type="submit">Sign Up</button>
-  </form>
+    <input type="hidden" name="name" value="{{ form.name.value }}" required />
+    <input type="hidden" name="email" value="{{ form.email.value }}" required />
+    <input type="hidden" name="password" value="{{ form.password.value }}" required />
+  {% endif %}
+  <button class="submit-btn" type="submit">Sign Up</button>
+</form>
 </div>
 {% endblock content %}
