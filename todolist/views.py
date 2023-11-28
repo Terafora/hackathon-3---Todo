@@ -1,5 +1,5 @@
 from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin, userPassesTestMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Note
 from .forms import NoteForm
 
@@ -29,7 +29,7 @@ class CreateNote(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(CreateNote, self).form_valid(form)
 
-class EditNote(LoginRequiredMixin, userPassesTestMixin ,UpdateView):
+class EditNote(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
     """Update a note"""
     template_name = "todolist/note_edit.html"
     model = Note
@@ -39,7 +39,7 @@ class EditNote(LoginRequiredMixin, userPassesTestMixin ,UpdateView):
     def test_func(self):
         return self.request.user == self.get_object().user
 
-class DeleteNote(LoginRequiredMixin, userPassesTestMixin ,DeleteView):
+class DeleteNote(LoginRequiredMixin, UserPassesTestMixin ,DeleteView):
     """Delete a note"""
     model = Note
     success_url = ""
