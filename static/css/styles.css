@@ -46,7 +46,99 @@ main {
   background-color: var(--white);
 }
 
+.copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#ffffff;
+    margin-bottom:0;
+  } */
 
+.title {
+  color: pink;
+}
+
+
+/* The styles for the signup page */
+
+#signup_form {
+  align-items: center;
+  text-align: center;
+  background-color: green;
+}
+
+.submit-btn {
+  background: #02ef90;
+  color: #fff;
+  border: 1px solid #040000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-shadow: none;
+}
+
+.submit-btn:hover {
+  background: rgb(4, 234, 15);
+  color: #fff;
+  border: 1px solid #040000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-shadow: none;
+}
+
+/* The styles for login page */
+
+form {
+  align-items: center;
+  text-align: center;
+  background-color: green;
+  color: black;
+}
+
+#Sign-in-btn {
+  background: #02ef90;
+  color: #fff;
+  border: 1px solid #040000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-shadow: none;
+}
+
+#Sign_in_btn:hover {
+  background: rgb(4, 234, 15);
+  color: #fff;
+  border: 1px solid #040000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-shadow: none;
+}
+
+/* Logout.html styling */
+.logout-form {
+  align-items: center;
+  text-align: center;
+  background-color: green;
+  color: black;
+}
+
+.signout-btn {
+  background: rgb(4, 234, 15);
+  color: #fff;
+  border: 1px solid #040000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-shadow: none;
+}
+
+.signout-btn:hover {
+  background: red;
+  color: white;
+  border: 1px solid #040000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-shadow: none;
+
+}
+=======
   
 /* Footer */
 
@@ -66,5 +158,3 @@ main {
   margin-bottom: 10px;
 }
 
-
-  
