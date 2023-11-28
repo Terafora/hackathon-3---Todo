@@ -1,17 +1,16 @@
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import ListView, CreateView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Note
 from .forms import NoteForm
 
 # Create your views here.
 
-class Home(TemplateView):
+class Home(ListView):
     """View all to do notes on home page"""
     template_name = "todolist/index.html"
     model = Note
     context_object_name = 'note_board'
     
-
 
 class CreateNote(LoginRequiredMixin, CreateView):
     """Add a new note"""
