@@ -5,6 +5,6 @@ urlpatterns = [
     path('', Home.as_view(), name="home"),
     path('createnote/', CreateNote.as_view(), name="create_note"),
     path('<slug:pk>/', NoteDetail.as_view(), name="note_detail"),
-    path('<slug:pk>/', NoteDelete.as_view(), name="note_delete"),
+    path('<slug:pk>/', DeleteNote.as_view(), name="note_delete"),
     path('edit/<slug:pk>/', EditNote.as_view(), name="note_edit"),
 ]
