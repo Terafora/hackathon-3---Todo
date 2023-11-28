@@ -1,7 +1,7 @@
 from django import forms
 from django.db import models
 from django.contrib.auth.models import User
-from jsrichtextfield.models import RichTextField
+from djrichtextfield.models import RichTextField
 
 # Create your models here.
 
@@ -18,5 +18,4 @@ class Note(models.Model):
     def __str__(self):
         return f"{self.title} | {self.due_date}"
 
-    class Meta:
-        ordering = ['-due_date']
+    
