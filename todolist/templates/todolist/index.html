@@ -3,15 +3,20 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+    <h1 class="text-center p-2">
+        Notes
+    </h1>
     <div class="container d-flex flex-row flex-wrap justify-content-center">
         <h1 class="text-center p-2">
             Notes
         </h1>
         {% for note in notes %}
+        <a href="{% url 'note_detail' %}">
             <div>
                 <h2 class="text-center" aria-label="click to view {{note.title}}">{{note.title}}</h2>
-                <div>{{note.note}}</div>
+                <div>{{note.note | truncatechars:100}}</div>
             </div>
+        </a>
         {% endfor %}
     </div>
 
