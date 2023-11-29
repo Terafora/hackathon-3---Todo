@@ -1,16 +1,25 @@
 {% load static %}
 
 
-<footer>
-    <a href="https://github.com/Ennie0906" target="_blank" rel="noopener" aria-label="GitHub - opens a new tab">
-        <img src="{% static '/images/github.svg' %}" alt="GitHub Icon" class="social-icon">
-    </a>
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram - opens a new tab">
-        <img src="{% static '/images/ig.svg' %}" alt="GitHub Icon" class="social-icon">
-    </a>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener"
-        aria-label="YouTube - opens a new tab">
-        <img src="{% static '/images/youtube.svg' %}" alt="GitHub Icon" class="social-icon">
-    </a>
-    <p>Mission Possible &copy; 2023</p>
+<footer class="text-light text-center py-1">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="https://github.com/Ennie0906" target="_blank" rel="noopener" class="text-light">
+                    <img src="{% static '/images/github.svg' %}" alt="GitHub Icon" class="social-icon">
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-light">
+                    <img src="{% static '/images/ig.svg' %}" alt="Instagram Icon" class="social-icon">
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-light">
+                    <img src="{% static '/images/youtube.svg' %}" alt="YouTube Icon" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <p class="mt-2 text-color">Mission Possible &copy; 2023</p>
+    </div>
 </footer>
