@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import Home, CreateNote, NoteDetail, DeleteNote, EditNote
-from .views import about
+from .views import Home, CreateNote, NoteDetail, DeleteNote, EditNote, about
 
 urlpatterns = [
     path('', Home.as_view(), name="home"),
