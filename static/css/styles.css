@@ -64,7 +64,7 @@ main {
 #signup_form {
   align-items: center;
   text-align: center;
-  background-color: green;
+  background-color: #E06E04 ;
 }
 
 .submit-btn {
@@ -90,12 +90,12 @@ main {
 form {
   align-items: center;
   text-align: center;
-  background-color: green;
+  background-color: #E06E04 ;
   color: black;
 }
 
 #Sign-in-btn {
-  background: #02ef90;
+  background:#E0777D;
   color: #fff;
   border: 1px solid #040000;
   border-radius: 20px;
@@ -104,7 +104,7 @@ form {
 }
 
 #Sign_in_btn:hover {
-  background: rgb(4, 234, 15);
+  background: #E0777D;
   color: #fff;
   border: 1px solid #040000;
   border-radius: 20px;
@@ -121,7 +121,7 @@ form {
 }
 
 .signout-btn {
-  background: rgb(4, 234, 15);
+  background: #E0777D;
   color: #fff;
   border: 1px solid #040000;
   border-radius: 20px;
@@ -138,6 +138,7 @@ form {
   text-shadow: none;
 
 }
+
 
   
 /* Footer */
@@ -158,6 +159,27 @@ form {
   margin-bottom: 10px;
 }
 
+/* colors */
+
 .text-color{
   color: #000;
+}
+
+.bg-color{
+  background-color: #E06E04 
+}
+
+/* About Page */
+
+.about{
+  letter-spacing: 1px;
+  font-size: larger;
+  padding: 5rem;
+  border-radius: 15px 50px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about-title{
+  letter-spacing: 1px;
+  text-decoration: underline;
 }

@@ -5,11 +5,12 @@
 {% block title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container text-center">
+<div class="container text-center ">
   <h1>{% trans "Sign In" %}</h1>
 
   <p>{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+    <a href="{{ signup_url }}">Sign up</a> first.{% endblocktrans %}
+  </p>
 
 
   <form class="form p-2" method="POST" action="{% url 'account_login' %}">
@@ -17,11 +18,12 @@
     {{ form|crispy }}
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    <a class="button secondaryAction d-block" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    <a class="button secondaryAction d-block" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?"
+      %}</a>
     <input type="hidden" name="name" value="{{ form.name.value }}" required />
     <input type="hidden" name="password" value="{{ form.password.value }}" required />
     {% endif %}
-    <button id ="Sign-in-btn" class="btn btn-primary w-25 mb-2" type="submit">{% trans "Sign In" %}</button>
+    <button id="Sign-in-btn" class="btn btn-primary w-25 mb-2" type="submit">{% trans "Sign In" %}</button>
   </form>
 </div>
 {% endblock %}
