@@ -138,7 +138,7 @@ form {
   text-shadow: none;
 
 }
-=======
+
   
 /* Footer */
 
@@ -158,3 +158,6 @@ form {
   margin-bottom: 10px;
 }
 
+.text-color{
+  color: #000;
+}
