@@ -1,5 +1,6 @@
 from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.urls import reverse_lazy
 from .models import Note
 from .forms import NoteForm
 
@@ -23,7 +24,7 @@ class CreateNote(LoginRequiredMixin, CreateView):
     template_name = "todolist/create_note.html"
     model = Note
     form_class = NoteForm
-    success_url = ""
+    success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -34,7 +35,7 @@ class EditNote(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
     template_name = "todolist/note_edit.html"
     model = Note
     form_class = NoteForm 
-    success_url = ""
+    success_url = reverse_lazy('home')
 
     def test_func(self):
         return self.request.user == self.get_object().user
@@ -42,7 +43,7 @@ class EditNote(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
 class DeleteNote(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete a note"""
     model = Note
-    success_url = ""
+    success_url = reverse_lazy('home')
 
     def test_func(self):
         return self.request.user == self.get_object().user
