@@ -7,8 +7,8 @@
         Notes
     </h1>
     <div class="container d-flex flex-row flex-wrap justify-content-center">
-        {% for note in notes %}
-        <a href="{% url 'note_detail' %}">
+        {% for note in note_board %}
+        <a href="{% url 'note_detail' note.slug %}">
             <div>
                 <h2 class="text-center" aria-label="click to view {{note.title}}">{{note.title}}</h2>
                 <div>{{note.note | truncatechars:100}}</div>
