@@ -5,7 +5,7 @@
 {% block title %}{% trans "Signup" %}{% endblock title %}
 
 {% block content %}
-<div class="container text-center">
+<div class="container text-center bg-colors signup-list">
   <h1>{% trans "Sign Up" %}</h1>
 
   <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
@@ -17,8 +17,8 @@
     <input type="hidden" name="name" value="{{ form.name.value }}" required />
     <input type="hidden" name="email" value="{{ form.email.value }}" required />
     <input type="hidden" name="password" value="{{ form.password.value }}" required />
-  {% endif %}
-  <button class="submit-btn" type="submit">Sign Up</button>
-</form>
+    {% endif %}
+    <button class="submit-btn" type="submit">Sign Up</button>
+  </form>
 </div>
 {% endblock content %}
