@@ -14,10 +14,11 @@
                 <div>{{note.note | truncatechars:100}}</div>
             </div>
         </a>
+        {% endfor %}
+    </div>
+    <div class="container">
         <a href="{% url 'create_note' %}">
             <button class="btn btn-primary">add +</button>
         </a>
-        {% endfor %}
     </div>
-
 {% endblock %}
